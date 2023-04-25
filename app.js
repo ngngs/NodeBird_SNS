@@ -45,6 +45,7 @@ app.use(session({
 }));
 app.use(passport.initialize()); // passport는 반드시 session 밑에서 해줘야함
 app.use(passport.session());    // connect.sid라는 이름으로 세션 쿠키가 브라우저로 전송
+                                // (브라우저) connect.sid = 123123215786
 
 app.use('/', pageRouter);
 app.use('/auth', authRouter);
